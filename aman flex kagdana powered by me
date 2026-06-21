@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMAN FLEX KAGDANA | All Printing Solutions Under One Roof</title>
+
+<meta name="description" content="AMAN FLEX KAGDANA - Flex Banner Printing, Wallpaper Printing, Backlit Board, Wedding Cards, Visiting Cards and Digital Printing Services.">
+<meta name="keywords" content="Printing, Flex Printing, Banner Printing, Sirsa, Kagdana">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+:root{
+--blue:#0047AB;
+--orange:#ff6b00;
+--black:#111;
+--white:#fff;
+}
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:#fff;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:var(--blue);
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--orange);
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1563986768609-322da13575f3');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+background:var(--orange);
+color:white;
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:var(--blue);
+transform:translateY(-4px);
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:var(--blue);
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.4s;
+text-align:center;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card i{
+font-size:45px;
+color:var(--orange);
+margin-bottom:15px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+height:250px;
+object-fit:cover;
+}
+
+.why{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-box{
+background:var(--blue);
+color:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.testimonial{
+padding:25px;
+background:#f5f5f5;
+border-radius:15px;
+}
+
+.contact-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+button{
+padding:15px;
+background:var(--orange);
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.map iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:15px;
+}
+
+footer{
+background:#111;
+color:white;
+padding:40px 8%;
+text-align:center;
+}
+
+.socials a{
+color:white;
+margin:0 10px;
+font-size:24px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+z-index:999;
+text-decoration:none;
+}
+
+.call-btn{
+position:fixed;
+bottom:90px;
+right:20px;
+width:60px;
+height:60px;
+background:var(--blue);
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+z-index:999;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+.about,
+.contact-box{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">AMAN FLEX KAGDANA</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>AMAN FLEX KAGDANA</h1>
+<p>All Printing Solutions Under One Roof</p>
+<a href="#contact" class="btn">Get Quote</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+
+<div>
+<h3>Professional Printing Services</h3>
+<br>
+<p>
+We provide high quality printing solutions including Flex Banner Printing,
+Wallpaper Printing, Hoarding Printing, Wedding Cards, Visiting Cards and much more.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<i class="fas fa-print"></i>
+<h3>Flex Banner Printing</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-image"></i>
+<h3>Wallpaper Printing</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-lightbulb"></i>
+<h3>Backlit Board</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-building"></i>
+<h3>Hoarding Printing</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-heart"></i>
+<h3>Wedding Cards</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-id-card"></i>
+<h3>Visiting Cards</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-store"></i>
+<h3>Shop Sign Boards</h3>
+</div>
+
+<div class="service-card">
+<i class="fas fa-desktop"></i>
+<h3>Digital Printing</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Why Choose Us</h2>
+
+<div class="why">
+
+<div class="why-box">
+<h3>Premium Quality</h3>
+</div>
+
+<div class="why-box">
+<h3>Fast Delivery</h3>
+</div>
+
+<div class="why-box">
+<h3>Affordable Pricing</h3>
+</div>
+
+<div class="why-box">
+<h3>Experienced Team</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Best printing service in Kagdana.</p>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Excellent quality and fast delivery.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Phone Number">
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div>
+
+<h3>Contact Details</h3>
+<br>
+
+<p><b>Phone:</b> 96535-36837</p>
+
+<p><b>Email:</b> amanflexkagdana@gmail.com</p>
+
+<p><b>Location:</b> Near SBI Bank, Kagdana, Sirsa, Haryana</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="map">
+
+<h2 class="section-title">Our Location</h2>
+
+<iframe src="https://maps.google.com/maps?q=Kagdana&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<footer>
+
+<h3>AMAN FLEX KAGDANA</h3>
+
+<p>All Printing Solutions Under One Roof</p>
+
+<br>
+
+<div class="socials">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+<br>
+
+<p>© 2026 AMAN FLEX KAGDANA. All Rights Reserved.</p>
+
+</footer>
+
+<a href="https://wa.me/919653536837" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="tel:9653536837" class="call-btn">
+<i class="fas fa-phone"></i>
+</a>
+
+<script>
+
+window.addEventListener('scroll',()=>{
+document.querySelector('.navbar').style.boxShadow=
+window.scrollY>50
+?'0 5px 20px rgba(0,0,0,.15)'
+:'0 2px 10px rgba(0,0,0,.1)';
+});
+<form action="https://formsubmit.co/amanflexkagdana@gmail.com" method="POST">
+<button type="submit">Send Message</button>
+
+</script>
+
+</body>
+</html>
